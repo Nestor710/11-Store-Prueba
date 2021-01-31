@@ -1,0 +1,18 @@
+<h1>Products</h1>
+
+<div *ngFor="let product of products">
+    <h3>
+        <a [title]="product.name + 'Details'">
+            {{ product.name }}
+        </a>
+    </h3>
+    <p>
+        {{ product.description }}
+    </p>
+    <button (click)="shared()">
+        Share
+    </button>
+    <app-product-alert  
+     [products]="product">
+    </app-product-alert>
+</div>
